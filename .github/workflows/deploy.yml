@@ -30,7 +30,7 @@ jobs:
     - name: Build, tag, and push Web Application image to Amazon ECR
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY_WEBAPP: clo835-assignment1_webapp_repo
+        ECR_REPOSITORY_WEBAPP: clo835-assignment1-webapp-repo
         IMAGE_TAG: v0.1
       run: |
         ls -ltra
@@ -43,7 +43,7 @@ jobs:
     - name: Build, tag, and push MySQL Database image to Amazon ECR
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY_MYSQL: clo835-assignment1_mysql_repo
+        ECR_REPOSITORY_MYSQL: clo835-assignment1-mysql-repo
         IMAGE_TAG: v0.1
       run: |
         ls -ltra

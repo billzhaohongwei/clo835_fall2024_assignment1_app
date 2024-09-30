@@ -33,7 +33,7 @@ jobs:
         ECR_REPOSITORY_WEBAPP: clo835-assignment1_webapp_repo
         IMAGE_TAG: v0.1
       run: |
-        cd clo835_fall2024_assignment1_app/webapp  # Assuming this path is where the Dockerfile for webapp is located
+        cd clo835_fall2024_assignment1_app  # Assuming this path is where the Dockerfile for webapp is located
         ls -ltra
         # Build the Docker image for the Web Application
         #docker build -t $ECR_REGISTRY/$ECR_REPOSITORY_WEBAPP:$IMAGE_TAG .
@@ -47,5 +47,9 @@ jobs:
         ECR_REPOSITORY_MYSQL: clo835-assignment1_mysql_repo
         IMAGE_TAG: v0.1
       run: |
-        cd clo835_fall2024_assignment1_app/mysql  # Assuming this path is where the Dockerfile for MySQL is located
+        cd clo835_fall2024_assignment1_app  # Assuming this path is where the Dockerfile for MySQL is located
         ls -ltra
+        # Build the Docker image for MySQL Database
+        # docker build -t $ECR_REGISTRY/$ECR_REPOSITORY_MYSQL:$IMAGE_TAG .
+        # Push the MySQL Database image to Amazon ECR
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY_MYSQL:$IMAGE_TAG

@@ -31,7 +31,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY_WEBAPP: clo835-assignment1-webapp-repo
-        IMAGE_TAG: v0.1
+        IMAGE_TAG: v0.2
       run: |
         ls -ltra
         # Build the Docker image for the Web Application
@@ -44,7 +44,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY_MYSQL: clo835-assignment1-mysql-repo
-        IMAGE_TAG: v0.1
+        IMAGE_TAG: v0.2
       run: |
         ls -ltra
         # Build the Docker image for MySQL Database
